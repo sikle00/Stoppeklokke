@@ -8,17 +8,26 @@
     <style>
         .bakgrunn{
             background-color: blue;
-            height: 500px;
+            height: 525px;
             width: 500px;
             border-radius: 25%;
             padding: 20px;
         }
         .clockButton{
             margin-top: 70px;
-            margin-left: 80px;
+            margin-left: 60px;
             border-radius: 40%;
             height: 105px;
-            width: 60px;
+            width: 90px;
+            font-size: 150%;
+        }
+        .Runde{
+            margin-top: 40px;
+            margin-left: 205px;
+            border-radius: 50%;
+            height: 50px;
+            width: 100px;
+            font-size: 150%;
         }
         .clockDisplay{
             height: 40px;
@@ -35,7 +44,16 @@
             border: 1px solid red;
             margin-top: 50px;
             margin-left: -145px;
-            font-size: x-small;
+            font-size: small;
+        }
+        .lastRound{
+            background-color: antiquewhite;
+            height: 50px;
+            width: 100px;
+            border: 5%;
+            margin-top: 20px;
+            margin-left: 40px;
+            font-size: small;
         }
     </style>
 <head>
@@ -44,9 +62,10 @@
     <button class="clockButton" onclick="startTimer()">Start Timer!</button>
     <button class="clockButton" onclick="pausetimer()">Pause</button>
     <button class="clockButton" onclick="stopAll()">Stopp &Fjern</button><br>
+    <button class="Runde" onclick="lapTime"> Runde</button>
 
-    <div id="app" class="clockDisplay"</div>   Total tid: <div id="lastRound" class="tid"></div> <br>
-</div>
+    <div id="app" class="clockDisplay"></div> 
+    Total tid: <div id="lastRound" class="tid"></div> <br>
     <script>
         const app = document.getElementById('app');
         const roundTime = document.getElementById('lastRound');
@@ -54,7 +73,7 @@
         var Timer;
 
         function startTimer(){
-            setInterval(countSeconds, 2000);
+            setInterval(countSeconds, 950);
         }
         function countSeconds(){
             app.innerHTML = seconds;
