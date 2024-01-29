@@ -55,6 +55,13 @@
             margin-left: 40px;
             font-size: small;
         }
+        .totalTid{
+            background-color: aliceblue;
+            height: 50px;
+            width: 105px;
+            border-radius: 30%;
+            font-size: small;
+        }
     </style>
 <head>
 <body>
@@ -62,10 +69,10 @@
     <button class="clockButton" onclick="startTimer()">Start Timer!</button>
     <button class="clockButton" onclick="pausetimer()">Pause</button>
     <button class="clockButton" onclick="stopAll()">Stopp &Fjern</button><br>
-    <button class="Runde" onclick="lapTime"> Runde</button>
+    <button class="Runde" onclick="restartclock()"> Runde</button>
 
     <div id="app" class="clockDisplay"></div> 
-    Total tid: <div id="lastRound" class="tid"></div> <br>
+    <div id="totalTid"> Total tid:</div> <div id="lastRound" class="tid"></div> <br>
     <script>
         const app = document.getElementById('app');
         const roundTime = document.getElementById('lastRound');
@@ -86,6 +93,9 @@
         }
         function stopAll(){
             location.reload()
+        }
+        function restartclock(){
+           onclick=$ 
         }
     </script>
 </body>
